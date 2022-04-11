@@ -37,4 +37,21 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         caps.setCapability("name", "first_test");
         return new AndroidDriver(getBrowserstackUrl(), caps);
     }
+
+//    @Override
+//    public WebDriver createDriver(Capabilities capabilities) {
+//        MutableCapabilities mutableCapabilities = new MutableCapabilities();
+//        mutableCapabilities.merge(capabilities);
+//        mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
+//        mutableCapabilities.setCapability("browserstack.user", browserstackLogin);
+//        mutableCapabilities.setCapability("browserstack.key", browserstackPassword);
+//        mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+//        mutableCapabilities.setCapability("device", "Google Pixel 3");
+//        mutableCapabilities.setCapability("os_version", "9.0");
+//        mutableCapabilities.setCapability("project", "First Java Project");
+//        mutableCapabilities.setCapability("build", "browserstack-build-1");
+//        mutableCapabilities.setCapability("name", "first_test");
+//
+//        return new RemoteWebDriver(getBrowserstackUrl(), mutableCapabilities);
+//    }
 }
