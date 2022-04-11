@@ -15,12 +15,12 @@ public class AndroidSelenideTests extends TestBase {
     @Test
     @Tag("mobile")
     void searchTest() {
-        step("type search", () -> {
+        step("Type search", () -> {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("BrowserStack");
         });
-        step("verify content found", () -> {
-            $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));
-        });
+        step("Verify content found", () ->
+                $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0)));
     }
 }
+
