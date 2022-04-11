@@ -1,4 +1,4 @@
-package helpers;
+package Drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;
