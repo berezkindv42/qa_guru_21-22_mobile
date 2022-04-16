@@ -11,9 +11,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-//import static helpers.Browserstack.browserstackLogin;
-//import static helpers.Browserstack.browserstackPassword;
-
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
     CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
@@ -33,7 +30,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
         mutableCapabilities.setCapability("browserstack.user", config.browserstackLogin());
         mutableCapabilities.setCapability("browserstack.key", config.browserstackPassword());
-        mutableCapabilities.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        mutableCapabilities.setCapability("app", config.appKey());
         mutableCapabilities.setCapability("device", "Google Pixel 3");
         mutableCapabilities.setCapability("os_version", "9.0");
         mutableCapabilities.setCapability("project", "First Java Project");

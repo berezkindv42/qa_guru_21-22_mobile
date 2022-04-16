@@ -13,5 +13,7 @@ public interface CredentialsConfig extends Config {
     String browserstackLogin();
     @Key("browserstack.password")
     String browserstackPassword();
+    @Key("app.key")
+    String appKey();
 
 }
