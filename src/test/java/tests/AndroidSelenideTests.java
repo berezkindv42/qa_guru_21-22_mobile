@@ -14,6 +14,7 @@ import static io.qameta.allure.Allure.step;
 public class AndroidSelenideTests extends TestBase {
 
     @Test
+    @Tag("mobile")
     void searchTest() {
         step("Skip onboarding page", () ->
                 $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());

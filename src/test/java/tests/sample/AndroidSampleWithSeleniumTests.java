@@ -16,6 +16,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class AndroidSampleWithSeleniumTests {
 
     @Test
+    @Disabled
     void searchTest() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
