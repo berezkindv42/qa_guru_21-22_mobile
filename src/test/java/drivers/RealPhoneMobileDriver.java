@@ -19,7 +19,7 @@ import java.net.URL;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 @ParametersAreNonnullByDefault
-public class LocalMobileDriver implements WebDriverProvider {
+public class RealPhoneMobileDriver implements WebDriverProvider {
     @Override
     @CheckReturnValue
     @Nonnull
@@ -31,7 +31,6 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
         options.setDeviceName("R58M61XZVRJ");
-//        options.setDeviceName("Pixel 4 API 30");
         options.setPlatformVersion("11.0");
 //        options.setCapability(APPLICATION_NAME, "Appium");
         options.setApp(app.getAbsolutePath());

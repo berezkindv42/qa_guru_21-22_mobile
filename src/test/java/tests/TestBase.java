@@ -1,6 +1,6 @@
-package tests.browserstack;
+package tests;
 
-import drivers.BrowserstackMobileDriver;
+import drivers.LocalMobileDriver;
 import com.codeborne.selenide.Configuration;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -20,7 +20,7 @@ public class TestBase {
     public static void setup() {
         addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        Configuration.browser = LocalMobileDriver.class.getName();
         Configuration.browserSize = null;
     }
 
