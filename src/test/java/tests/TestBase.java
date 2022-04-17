@@ -22,24 +22,9 @@ public class TestBase {
 
     @BeforeAll
     public static void setup() {
-        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class, System.getProperties());
         addListener("AllureSelenide", new AllureSelenide());
 
-        switch (config.deviceHost().toLowerCase()) {
-            case "browserstack":
-                Configuration.browser = BrowserstackMobileDriver.class.getName();
-                break;
-            case "emulator":
-                Configuration.browser = EmulatorMobileDriver.class.getName();
-                break;
-            case "real":
-                Configuration.browser = RealPhoneMobileDriver.class.getName();
-                break;
-            default:
-                throw new IllegalArgumentException(
-                        String.format("Unknown device name=%s. " +
-                                "-Ddevice.name=[Browserstack/Selenoid/Emulation/Real]", config.deviceHost()));
-        }
+        Configuration.browser = RealPhoneMobileDriver.class.getName();
         Configuration.browserSize = null;
     }
 

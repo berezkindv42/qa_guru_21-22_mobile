@@ -24,7 +24,3 @@ public class Browserstack {
                 .path("automation_session.video_url");
     }
 }
-
-//    public static String
-//            browserstackLogin = "berezkindv_Q8M15k",
-//            browserstackPassword = "qdjj3ZPvdvkzyry2eMnX";

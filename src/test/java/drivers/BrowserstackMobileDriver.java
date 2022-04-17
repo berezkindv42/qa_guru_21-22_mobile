@@ -27,7 +27,6 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(Capabilities capabilities) {
         MutableCapabilities mutableCapabilities = new MutableCapabilities();
         mutableCapabilities.merge(capabilities);
-
         mutableCapabilities.setCapability("browserstack.appium_version", "1.22.0");
         mutableCapabilities.setCapability("browserstack.user", config.browserstackLogin());
         mutableCapabilities.setCapability("browserstack.key", config.browserstackPassword());
