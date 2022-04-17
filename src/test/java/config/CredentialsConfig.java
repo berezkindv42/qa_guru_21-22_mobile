@@ -18,6 +18,15 @@ public interface CredentialsConfig extends Config {
     @Key("app.key")
     String appKey();
 
+    @Key("selenoid.user")
+    String selenoidUser();
+
+    @Key("selenoid.password")
+    String selenoidPassword();
+
+    @Key("device.host")
+    String deviceHost();
+
 }
 
 //"browserstack.user","berezkindv_Q8M15k"

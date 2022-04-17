@@ -32,7 +32,6 @@ public class RealPhoneMobileDriver implements WebDriverProvider {
         options.setPlatformName("Android");
         options.setDeviceName("R58M61XZVRJ");
         options.setPlatformVersion("11.0");
-//        options.setCapability(APPLICATION_NAME, "Appium");
         options.setApp(app.getAbsolutePath());
         options.setLocale("en");
         options.setLanguage("en");
