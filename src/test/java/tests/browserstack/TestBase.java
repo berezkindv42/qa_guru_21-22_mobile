@@ -1,6 +1,6 @@
 package tests.browserstack;
 
-import Drivers.BrowserstackMobileDriver;
+import drivers.BrowserstackMobileDriver;
 import com.codeborne.selenide.Configuration;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;

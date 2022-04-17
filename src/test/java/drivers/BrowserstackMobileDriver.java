@@ -1,4 +1,4 @@
-package Drivers;
+package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import config.CredentialsConfig;

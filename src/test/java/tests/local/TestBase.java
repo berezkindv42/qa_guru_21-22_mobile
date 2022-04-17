@@ -1,6 +1,6 @@
 package tests.local;
 
-import Drivers.LocalMobileDriver;
+import drivers.LocalMobileDriver;
 import com.codeborne.selenide.Configuration;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
