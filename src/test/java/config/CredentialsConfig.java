@@ -15,12 +15,9 @@ public interface CredentialsConfig extends Config {
 
     @Key("browserstack.password")
     String browserstackPassword();
-    @Key("app.key")
-    String appKey();
 
     @Key("app.key")
     String appKey();
-
 }
 
 //"browserstack.user","berezkindv_Q8M15k"
