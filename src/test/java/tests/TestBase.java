@@ -22,9 +22,21 @@ public class TestBase {
 
     @BeforeAll
     public static void setup() {
+//        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
         addListener("AllureSelenide", new AllureSelenide());
 
-        Configuration.browser = RealPhoneMobileDriver.class.getName();
+//        if (config.deviceHost().equals("browserstack"))
+//            Configuration.browser = BrowserstackMobileDriver.class.getName();
+//
+//        else if (config.deviceHost().equals("emulator"))
+//            Configuration.browser = EmulatorMobileDriver.class.getName();
+//
+//        else if (config.deviceHost().equals("real"))
+//            Configuration.browser = RealPhoneMobileDriver.class.getName();
+//
+//        else throw new RuntimeException("Select browserstack / emulator / real in -DdeviceHost parameter");
+
+        Configuration.browser = BrowserstackMobileDriver.class.getName();
         Configuration.browserSize = null;
     }
 
