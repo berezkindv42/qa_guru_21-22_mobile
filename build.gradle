@@ -82,3 +82,8 @@ task browserstack_tests(type: Test) {
         includeTags 'browserstack'
     }
 }
+task real_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags 'real'
+    }
+}

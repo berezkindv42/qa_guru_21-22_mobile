@@ -1,8 +1,9 @@
-package tests.local;
+package tests.real;
 
 import io.appium.java_client.AppiumBy;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.local.TestBase;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
@@ -30,7 +31,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("real")
     void onBoardingPagesTest() {
         step("First onboarding page", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"))
@@ -55,7 +56,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("real")
     void customizeFeedMenuTest() {
         step("Skip onboarding page", () -> back());
 
@@ -70,7 +71,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("real")
     void customizeFeedHideAllOptionsTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
@@ -93,7 +94,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("real")
     void changeLanguageTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
@@ -116,7 +117,7 @@ public class AndroidSelenideTests extends TestBase {
     }
 
     @Test
-    @Tag("local")
+    @Tag("real")
     void mainMenuTest() {
         step("Skip onboarding pages", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click();
