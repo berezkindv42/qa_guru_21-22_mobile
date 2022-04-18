@@ -22,15 +22,15 @@ import static helpers.Attach.getSessionId;
 
 public class TestBase {
 
+    static String deviceHost = System.getProperty("deviceHost").toLowerCase();
+
     @BeforeAll
     public static void setup() {
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
         addListener("AllureSelenide", new AllureSelenide());
 
-        String deviceHostVar = System.getProperty("deviceHost");
-
 //        String deviceHost = config.deviceHost().toLowerCase();
-        String deviceHost = deviceHostVar.toLowerCase();
+//        String deviceHost = deviceHostVar.toLowerCase();
         switch (deviceHost) {
             case "browserstack":
                 Configuration.browser = BrowserstackMobileDriver.class.getName();
@@ -52,7 +52,7 @@ public class TestBase {
     public void startDriver() {
         open();
 
-        Attach.attachAsText("Устройство запуска", "");
+        Attach.attachAsText("Устройство запуска", deviceHost);
     }
 
     @AfterEach
@@ -64,6 +64,7 @@ public class TestBase {
 
         closeWebDriver();
 
-        Attach.video(sessionId);
+        if (deviceHost.contains("browserstack"))
+            Attach.video(sessionId);
     }
 }
