@@ -1,6 +1,5 @@
 package config;
 
-
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
@@ -14,7 +13,7 @@ public interface CredentialsConfig extends Config {
     String browserstackLogin();
     @Key("browserstack.password")
     String browserstackPassword();
-    @Key("app.key")
-    String appKey();
+    @Key("browserstack.app.key")
+    String browserstackAppKey();
 
 }
