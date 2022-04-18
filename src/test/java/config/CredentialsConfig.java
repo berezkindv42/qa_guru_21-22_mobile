@@ -18,7 +18,7 @@ public interface CredentialsConfig extends Config {
     @Key("app.key")
     String appKey();
 
-    @Key("device.host")
+    @Key("browserstack.app.key")
     String deviceHost();
 
 }
