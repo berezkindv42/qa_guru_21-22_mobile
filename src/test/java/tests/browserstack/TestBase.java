@@ -38,6 +38,8 @@ public class TestBase {
 
         closeWebDriver();
 
+//        if (config.deviceHost().contains("browserstack")) {
+//            Attach.video(sessionId);
         Attach.video(sessionId);
     }
 }
