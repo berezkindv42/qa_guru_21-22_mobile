@@ -27,7 +27,10 @@ public class TestBase {
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
         addListener("AllureSelenide", new AllureSelenide());
 
-        String deviceHost = config.deviceHost().toLowerCase();
+        String deviceHostVar = System.getProperty("devicehost");
+
+//        String deviceHost = config.deviceHost().toLowerCase();
+        String deviceHost = deviceHostVar.toLowerCase();
         switch (deviceHost) {
             case "browserstack":
                 Configuration.browser = BrowserstackMobileDriver.class.getName();
