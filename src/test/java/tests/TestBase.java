@@ -27,7 +27,7 @@ public class TestBase {
         CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
         addListener("AllureSelenide", new AllureSelenide());
 
-        String deviceHostVar = System.getProperty("devicehost");
+        String deviceHostVar = System.getProperty("deviceHost");
 
 //        String deviceHost = config.deviceHost().toLowerCase();
         String deviceHost = deviceHostVar.toLowerCase();
