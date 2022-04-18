@@ -19,6 +19,7 @@ public interface CredentialsConfig extends Config {
     String browserstackAppKey();
 
     @Key("device.host")
+    @DefaultValue("browserstack")
     String deviceHost();
 
 }

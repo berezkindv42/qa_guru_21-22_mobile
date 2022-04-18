@@ -12,6 +12,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.util.Locale;
+
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
@@ -22,21 +24,24 @@ public class TestBase {
 
     @BeforeAll
     public static void setup() {
-//        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
         addListener("AllureSelenide", new AllureSelenide());
 
-//        if (config.deviceHost().equals("browserstack"))
-//            Configuration.browser = BrowserstackMobileDriver.class.getName();
-//
-//        else if (config.deviceHost().equals("emulator"))
-//            Configuration.browser = EmulatorMobileDriver.class.getName();
-//
-//        else if (config.deviceHost().equals("real"))
-//            Configuration.browser = RealPhoneMobileDriver.class.getName();
-//
-//        else throw new RuntimeException("Select browserstack / emulator / real in -DdeviceHost parameter");
-
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        String deviceHost = config.deviceHost().toLowerCase();
+        switch (deviceHost) {
+            case "browserstack":
+                Configuration.browser = BrowserstackMobileDriver.class.getName();
+                break;
+            case "emulator":
+                Configuration.browser = EmulatorMobileDriver.class.getName();
+                break;
+            case "real":
+                Configuration.browser = RealPhoneMobileDriver.class.getName();
+                break;
+            default:
+                throw new RuntimeException("Неверно передан параметр deviceHost, " +
+                        "вберите из: browserstack / emulator / real");
+        }
         Configuration.browserSize = null;
     }
 
