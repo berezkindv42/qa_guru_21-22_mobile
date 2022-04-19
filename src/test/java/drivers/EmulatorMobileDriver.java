@@ -30,6 +30,7 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
+        options.setUdid("emulator-5554");
         options.setDeviceName("Pixel 4 API 30");
         options.setPlatformVersion("11.0");
         options.setApp(app.getAbsolutePath());

@@ -30,6 +30,7 @@ public class RealPhoneMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
+        options.setUdid("R58M61XZVRJ");
         options.setDeviceName("R58M61XZVRJ");
         options.setPlatformVersion("11.0");
         options.setApp(app.getAbsolutePath());
