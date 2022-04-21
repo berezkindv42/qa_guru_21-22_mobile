@@ -19,12 +19,10 @@ import static helpers.Attach.getSessionId;
 
 
 public class TestBase {
-
     static String deviceHost = System.getProperty("deviceHost").toLowerCase();
 
     @BeforeAll
     public static void setup() {
-        CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
         addListener("AllureSelenide", new AllureSelenide());
 
         switch (deviceHost) {

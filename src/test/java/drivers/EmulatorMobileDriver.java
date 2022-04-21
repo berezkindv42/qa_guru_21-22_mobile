@@ -34,8 +34,6 @@ public class EmulatorMobileDriver implements WebDriverProvider {
         options.setDeviceName("Pixel 4 API 30");
         options.setPlatformVersion("11.0");
         options.setApp(app.getAbsolutePath());
-        options.setLocale("en");
-        options.setLanguage("en");
         options.setAppPackage("org.wikipedia.alpha");
         options.setAppActivity("org.wikipedia.main.MainActivity");
 

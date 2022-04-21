@@ -52,6 +52,5 @@ public class AndroidSelenideTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/fragment_onboarding_done_button")).click();
         });
     }
-
 }
 
